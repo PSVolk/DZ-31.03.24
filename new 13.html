@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+function findMaxDigit(num) {
+    const numStr = num.toString();
+  
+  let maxDigit = -Infinity;
+  
+    for (let i = 0; i < numStr.length; i++) {
+    let digit = parseInt(numStr[i]);
+    
+        if (digit > maxDigit) {
+      maxDigit = digit;
+    }
+  }
+  
+  return maxDigit;
+}
+
+alert(findMaxDigit(123456789)); 
+ 
+
+</script>
+</body>
+</html>
