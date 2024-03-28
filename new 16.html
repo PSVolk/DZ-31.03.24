@@ -1,0 +1,32 @@
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+function fibonacci(n) {
+  if (n <= 0) {
+    return "Invalid input";
+  } else if (n === 1 || n === 2) {
+    return 1;
+  } else {
+    let fibPrev = 1;
+    let fibCurrent = 1;
+
+    for (let i = 3; i <= n; i++) {
+      let temp = fibCurrent;
+      fibCurrent = fibPrev + fibCurrent;
+      fibPrev = temp;
+    }
+
+    return fibCurrent;
+  }
+}
+
+alert(fibonacci(3)); // Output: 2
+alert(fibonacci(6)); // Output: 8; 
+
+</script>
+</body>
+</html>
